@@ -1,2 +1,2 @@
-# KyoungYeobGit
+# KyoungYeob's Git
 Kyoung Yeob's Git repository...
