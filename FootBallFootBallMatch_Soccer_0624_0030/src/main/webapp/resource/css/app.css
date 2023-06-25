@@ -1,0 +1,119 @@
+@font-face {
+	font-family: 'NanumSquareNeo-Variable';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2')
+		format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+* {
+	font-family: 'NanumSquareNeo-Variable', Courier, monospace
+}
+
+body {
+    color:black;
+    z-index: 0;
+}
+
+#navbarSupportedContent {
+    padding: 0;
+}
+
+.nav-item{
+    font-size: 1.2rem;
+    color:black;
+}
+
+.modal-title{
+	color:black;
+}
+table{
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+table thead{
+    background-color: rgb(232, 147, 207);
+}
+
+.page-item {
+    color: rgb(238, 50, 36) !important;
+}
+
+.index-main-pic {
+    background-image: url('../image/index-main.jpg');
+    filter: brightness(0.5);
+    /* 諛깃렇�쇱�대�� �대�몄��� 諛�湲곕�� 50%濡� ��異� */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin-top: 0;
+    position: relative;
+    z-index: -1;
+}
+
+.index-main-content {
+    top: 120px;
+    left: 100px;
+    position: absolute;
+    color: white !important;
+    text-shadow: 4px 4px 4px black;
+}
+
+.index-main-content .text {
+    margin: 2rem;
+    padding: 0;
+ 	font-family: 'Staatliches', cursive;
+	font-weight: 450;
+    font-size: 5rem;
+}
+
+/* teams 臾몄���� 愿��� css */
+.logo-box {
+    margin-left: 1rem;
+    width: 130px;
+    height: 130px; 
+    border-radius: 70%;
+    overflow: hidden;
+}
+.logo-box:hover{    
+    border-radius: 90%;
+    overflow: hidden;
+    transform: scale(1.3);
+    transition: 0.4s;
+}
+
+.logo-profile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.align-self-center{
+    margin-left: 10px;
+}
+
+.teams-bg-pic {
+    background-image: url('../image/logo-bg-image.png');
+    filter: brightness(0.3);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin-top: 0;
+    position: relative;
+    z-index: -1;
+}
+
+.teams-logo-pic{
+    top: 120px;
+    left: 100px;
+    position: absolute;
+    color: white !important;
+    text-shadow: 4px 4px 4px black;
+}
+
+
+
+
+
