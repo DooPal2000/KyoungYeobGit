@@ -1,0 +1,21 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+    format:
+      date: yyyy-MM-dd      
+  datasource:
+    url: jdbc:h2:mem:testdb
+  jpa:
+    defer-datasource-initialization: 'true'
+
+    
+logging:
+  level:
+    org:
+      springframework: INFO
+    com:
+      kyoungyeob:
+        springboot:
+          myfirstwebapp: DEBUG
