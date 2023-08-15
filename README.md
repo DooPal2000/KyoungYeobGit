@@ -25,8 +25,9 @@ https://youtu.be/AHs9yVf4z60
 
 ## 유데미 강의 필기노트
 ### 유데미 강의 필기노트로 이동하시려면 브랜치 'Udemy-Spring-39h'로 이동해 주세요.
-
-_이 과정에서는 다음과 같은 Java Framework 기본을 배웁니다.
+<details><summary>강의 상세 내용 보기</summary>
+```
+이 과정에서는 다음과 같은 Java Framework 기본을 배웁니다.
 
 #1: Spring Framework
 
@@ -64,7 +65,12 @@ _이 과정에서는 다음과 같은 Java Framework 기본을 배웁니다.
 
 
 
-Spring Framework와 Spring Boot Framework를 이용해 실제 Java 애플리케이션을 빌드하고 클라우드에 배포하기 위해 알아야 모든 것을 배울 수 있는 과정입니다._
+Spring Framework와 Spring Boot Framework를 이용해 실제 Java 애플리케이션을 빌드하고 클라우드에 배포하기 위해 알아야 모든 것을 배울 수 있는 과정입니다.
+
+  
+```
+</details>
+
 
 
 
