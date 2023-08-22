@@ -5,7 +5,11 @@
 1. 풋볼 매치 (개인 프로젝트)
 2. 유데미 강의 필기노트 39h (브랜치 이동 필요)
 
+<<<<<<< HEAD
 ## ⚽FootBall-Match Project 
+=======
+## FootBall-Match Project 
+>>>>>>> Udemy-Spring-39h
 저의 1인 개인 프로젝트입니다. 기능은 다음과 같습니다.
 
 1. 메인 화면(글자 자동출력)
@@ -23,8 +27,13 @@ http://naver.me/GEun1jdK
 https://youtu.be/AHs9yVf4z60
 
 
+<<<<<<< HEAD
 ## ✍️유데미 강의 프로젝트
 ### ✍️유데미 강의 프로젝트로 이동하시려면 브랜치 'Udemy-Spring-39h'로 이동해 주세요.
+=======
+## 유데미 강의 필기노트
+### 유데미 강의 필기노트로 이동하시려면 브랜치 'Udemy-Spring-39h'로 이동해 주세요.
+>>>>>>> Udemy-Spring-39h
 
 
 __강의 상세 내용 보기__
