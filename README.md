@@ -5,7 +5,7 @@
 1. 풋볼 매치 (개인 프로젝트)
 2. 유데미 강의 필기노트 39h (브랜치 이동 필요)
 
-<<<<<<< HEAD
+
 ## ⚽FootBall-Match Project 
 =======
 ## FootBall-Match Project 
@@ -27,7 +27,6 @@ http://naver.me/GEun1jdK
 https://youtu.be/AHs9yVf4z60
 
 
-<<<<<<< HEAD
 ## ✍️유데미 강의 프로젝트
 ### ✍️유데미 강의 프로젝트로 이동하시려면 브랜치 'Udemy-Spring-39h'로 이동해 주세요.
 =======
