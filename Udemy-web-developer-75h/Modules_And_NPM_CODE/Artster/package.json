@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "colors": "^1.4.0",
+    "figlet": "^1.5.2",
+    "give-me-a-joke": "^0.5.1"
+  },
+  "name": "modules_and_npm_code",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kyoung yeob",
+  "license": "ISC",
+  "description": ""
+}
