@@ -24,8 +24,8 @@ http://naver.me/GEun1jdK
 https://youtu.be/AHs9yVf4z60
 
 
-## ✍️유데미 강의 프로젝트
-### ✍️유데미 강의 프로젝트로 이동하시려면 브랜치 'Udemy-Spring-39h'로 이동해 주세요.
+## ✍️유데미 강의 프로젝트 01 (Udemy-Spring-39h )
+### ✍️유데미 강의 프로젝트 01 로 이동하시려면 브랜치 'Udemy-Spring-39h'로 이동해 주세요.
 
 
 
@@ -73,6 +73,56 @@ __강의 상세 내용 보기__
 
 Spring Framework와 Spring Boot Framework를 이용해 실제 Java 애플리케이션을 빌드하고 클라우드에 배포하기 위해 알아야 모든 것을 배울 수 있는 과정입니다.  
 
+
+
+## ✍️유데미 강의 프로젝트02 (Udemy-The Web Developer-75h)
+### ✍️유데미 강의 프로젝트02 로 이동하시려면 브랜치 'Udemy-The Web Developer-75h'로 이동해 주세요.
+
+
+
+
+__강의 상세 내용 보기__
+
+
+이 과정에서는 다음과 같은 Java Framework 기본을 배웁니다.
+
+#1: Spring Framework
+
+#2: Spring Boot
+
+#3: JPA 및 Hibernate
+
+
+
+다음과 같은 빌드 방법도 배웁니다.
+
+#1: Spring 및 Spring Boot를 이용해 웹 애플리케이션 빌드하기
+
+#2: Spring Boot를 이용해 효율적인 REST API 빌드하기
+
+#3: Spring, Spring Boot, React, Spring Security를 이용해 풀 스택 애플리케이션 빌드하기
+
+
+
+다음 항목도 배웁니다.
+
+#1: Docker
+
+#2: Maven
+
+#3: Gradle
+
+#4: Spring AOP
+
+#5: Spring Security
+
+
+
+빌드한 애플리케이션을 AWS에 배포합니다.
+
+
+
+Spring Framework와 Spring Boot Framework를 이용해 실제 Java 애플리케이션을 빌드하고 클라우드에 배포하기 위해 알아야 모든 것을 배울 수 있는 과정입니다.  
 
 
 
