@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head') %>
+<body>
+        <%- include('partials/navbar') %>
+    <div class="container mt-3">
+
+        <h2><a href="/bond">채권 찾아보기</a></h2>
+        <p>채권은 가장 최근 평일 기준으로, 금리가 6~10% 구간에 있고, 거래대금이 1억원 이상인 것만 추천됩니다.</p>
+        <%- include('partials/footer') %>
+
+        <!-- bondData 객체 전체를 출력 -->
+        <h1>Bond Information</h1>
+         <!-- <ul>
+            <% bondData.forEach(item => { %>
+                <li>
+                    <p>기준일자: <%= item.basDt %></p>
+                    <p>이름: <%= item.itmsNm %></p>
+                    <p>clprPrc: <%= item.clprPrc %></p>
+                    <p>clprBnfRt: <%= item.clprBnfRt %></p>
+                </li>
+            <% }); %>
+        </ul> -->
+
+        <div class="container text-center">
+            <div class="row align-items-start">
+              <% bondData.forEach(item => { %>
+                <div class="col-4">
+                  <div class="card mb-3" style="width: 18rem;">
+                    <div class="card-header">
+                      종가기준 수익률: <%= item.clprBnfRt %>
+                    </div>
+                    <div class="card-body">
+                      <p>기준일자: <%= item.basDt %></p>
+                      <p>이름: <%= item.itmsNm %></p>
+                      <p>종가: <%= item.clprPrc %></p>
+                    </div>
+                  </div>
+                </div>
+              <% }); %>
+            </div>
+          </div>
+          </body>
+
+</html>

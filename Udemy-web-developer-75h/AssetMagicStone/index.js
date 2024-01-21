@@ -1,15 +1,18 @@
-
 const express = require("express");
+const ejs = require('ejs');
 const axios = require('axios');
 
-const app = express();
-const path = require('path');
-const redditData = require('./data.json');
+const bondApiKey = 'N463weCrbTq%2B2DCYktfFErwgTb1paASqucp3BYeBsoWwFKSF51ikUg%2BJ1fIptkYqIjhkPqPx6vXLp%2FAZeELfCA%3D%3D'
+const encodedApiKey = encodeURIComponent(bondApiKey);
 
+const { getBondData, getKrwCurrencyData, getJpyCurrencyData } = require('./api');
+
+
+
+const app = express();
+const path = require('path')
 
 app.use(express.static(path.join(__dirname, 'public')))
-
-
 app.set('view engine', 'ejs');
 
 // 현재 디렉토리를 가져와서 뒤에 /views 붙인 경로를 세팅해준다. 
@@ -50,17 +53,16 @@ app.get('/',(req,res)=>{
     res.render('home')
 })
 
+// EJS 템플릿 파일을 렌더링하는 라우트
 app.get('/bond', async (req, res) => {
-    try {  
-
-        // API 엔드포인트 URL 생성
-        const apiUrl = `https://apis.data.go.kr/1160100/service/GetBondSecuritiesInfoService/getBondPriceInfo?serviceKey=N463weCrbTq%2B2DCYktfFErwgTb1paASqucp3BYeBsoWwFKSF51ikUg%2BJ1fIptkYqIjhkPqPx6vXLp%2FAZeELfCA%3D%3D&pageNo=1&numOfRows=30&resultType=json&beginBasDt=${formattedDate}&beginClprBnfRt=6&endClprBnfRt=12&beginTrPrc=100000000`;
-
-        // API를 호출하고 데이터를 가져오는 작업
-        const response = await axios.get(apiUrl);
-        const bondData = response.data.response.body.items.item;
+    try {
+        // 어제의 날짜를 계산
+        const yesterday = new Date();
+        yesterday.setDate(yesterday.getDate() - 1);
+        const formattedDate = formatDate(yesterday);
+  
+        const bondData = await getBondData(formattedDate, apiKey);
         console.log(bondData);
-
 
         // 가져온 데이터를 템플릿에 전달
         res.render('bond', { bondData });
@@ -70,39 +72,38 @@ app.get('/bond', async (req, res) => {
         res.status(500).send('API 요청 중 오류가 발생했습니다.');
     }
 });
+
+app.get('/currency/krw', async(req,res) => {
+  try{
+    const currencyData = await getKrwCurrencyData();
+    console.log(currencyData);
+
+    res.render('currency/currencyKrw', { currencyData });
+  }
+  catch(err){
+    console.error('API 요청 중 오류가 발생했습니다.', err);
+    res.status(500).send('API 요청 중 오류가 발생했습니다.');
+  }
+});
+
+app.get('/currency/jpy', async(req,res) => {
+  try{
+    const currencyData = await getJpyCurrencyData();
+    console.log(currencyData);
+
+    res.render('currency/currencyJpy', { currencyData });
+  }
+  catch(err){
+    console.error('API 요청 중 오류가 발생했습니다.', err);
+    res.status(500).send('API 요청 중 오류가 발생했습니다.');
+  }
+});
     
 
 
 
 
-app.get('/cats',(req,res)=>{
-    const cats = [
-        'Blue', 'Rocket', 'Monty', 'Stephanie', 'Winston'
-    ]
-    res.render('cats', {cats})
-})
-
-
-
-
-app.get('/r/:subreddit',(req,res)=>{
-    const { subreddit } = req.params;
-    const data = redditData[subreddit];
-    if(data){
-        res.render('subreddit', { ...data })
-    }else{
-        res.render('notfound', {subreddit})
-    }
-    console.log(data);
-})
-
-app.get('/rand', (req, res) => {
-    const num = Math.floor(Math.random() * 10) + 1;
-    res.render('random', { num })
-})
-
-
 
 app.listen(3000,()=> {
-    console.log("Listening on port 3000")
+  console.log("Listening on port 3000")
 })

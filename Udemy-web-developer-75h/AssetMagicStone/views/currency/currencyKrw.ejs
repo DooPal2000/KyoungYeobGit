@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>환율 차트</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <canvas id="exchangeChart"></canvas>
+  <!-- Chart.js 구성 스크립트 -->
+  <script>
+    // 데이터 추출
+    var timeSeries = Object.entries( <%- JSON.stringify(currencyData.data.time_series) %>);
+    var labels = [];
+    var exchangeRates = [];
+
+    // 데이터 가공
+    timeSeries.forEach(function(entry) {
+      var date = entry[0].split(" ")[0]; // 날짜 추출
+      var exchangeRate = entry[1].exchange_rate; // 환율 추출
+
+      labels.push(date); // 날짜를 labels 배열에 추가
+      exchangeRates.push(exchangeRate); // 환율을 exchangeRates 배열에 추가
+    });
+
+    // 차트 그리기
+    var ctx = document.getElementById('exchangeChart').getContext('2d');
+    var chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'USD-KRW 환율',
+          data: exchangeRates,
+          borderColor: 'blue',
+          fill: false
+        }]
+      },
+      options: {
+        scales: {
+          x: {
+            title: {
+              display: true,
+              text: '날짜'
+            }
+          },
+          y: {
+            title: {
+              display: true,
+              text: '환율'
+            }
+          }
+        }
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>
