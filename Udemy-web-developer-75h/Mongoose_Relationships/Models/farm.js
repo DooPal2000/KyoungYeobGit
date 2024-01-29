@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
+// ⚠️ 즉, 농장-상품 관계(One to Many)에선 농장(One 측)에서 ref push 를 하지만,
+// ⚠️ 사용자 - 트위터 관계(One to Bajillions) 에서는 트위터(many 측) 에 ref push한다. 
+
 mongoose.connect('mongodb://localhost:27017/relationshipDemo', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log("MONGO CONNECTION OPEN!!!")
