@@ -34,6 +34,8 @@ app.get('/farms', async (req, res) => {
 app.get('/farms/new', (req, res) => {
     res.render('farms/new')
 })
+
+// 순서에 주의하자, /farms/:id  요청이 /farms/new 이전에 있다면, new 도 id 로 인식해 버린다.
 app.get('/farms/:id', async (req, res) => {
     const farm = await Farm.findById(req.params.id).populate('products');
     res.render('farms/show', { farm })
