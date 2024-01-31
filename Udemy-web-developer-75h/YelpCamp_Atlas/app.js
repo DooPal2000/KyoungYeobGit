@@ -3,16 +3,19 @@ const path = require('path');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const Campground = require('./models/campground');
+require('dotenv').config({ path: './process.env' });
+
 
 mongoose
   .connect(
-    "mongodb+srv://kkyub13:OvOpk8KFXzM6YbmL@cluster-ky.t0selv7.mongodb.net/Campground?retryWrites=true&w=majority"
+    process.env.MONGODB_URI
   )
   .then(() => {
     console.log("Connected to database!");
   })
-  .catch(() => {
+  .catch((e) => {
     console.log("Connection failed!");
+    console.error("Connection failed:", e);
   });
 
 
