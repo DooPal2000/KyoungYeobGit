@@ -26,6 +26,7 @@ const farmSchema = new Schema({
 });
 
 // DELETE ALL ASSOCIATED PRODUCTS AFTER A FARM IS DELETED
+// 농장 삭제 시 하위에 있는 상품들도 같이 삭제하는 미들웨어
 farmSchema.post('findOneAndDelete', async function (farm) {
     if (farm.products.length) {
         const res = await Product.deleteMany({ _id: { $in: farm.products } })
