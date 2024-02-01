@@ -83,46 +83,86 @@ Spring Framework와 Spring Boot Framework를 이용해 실제 Java 애플리케�
 
 __강의 상세 내용 보기__
 
+### JavaScript (2020년 기준 최신 문법, ES6, ES2018 등)
+- 최신 JavaScript 문법 및 업데이트된 기능 습득
 
-이 과정에서는 다음과 같은 Java Framework 기본을 배웁니다.
+### 부트스트랩 4와 5 (알파 버전)
+- 부트스트랩 4 및 5의 사용법 및 새로운 기능 활용
 
-#1: Spring Framework
+### REST
+- REST 아키텍처의 이해와 활용
 
-#2: Spring Boot
+### SQL과 NoSQL 데이터베이스
+- SQL 및 NoSQL 데이터베이스의 개념과 활용법
 
-#3: JPA 및 Hibernate
+### MongoDB
+- MongoDB 데이터베이스의 사용법
+
+### 스키마 설계
+- 데이터베이스 스키마 설계 기초
+
+### Mongoose
+- Mongoose 라이브러리를 활용한 MongoDB와의 상호작용
+
+### 인증하기
+- 사용자 인증 구현 방법
+
+### 쿠키와 세션
+- 쿠키와 세션의 개념 및 활용법
+
+### 기초 보안 이슈 - SQL Injection, XSS 등
+- 기본적인 보안 이슈에 대한 이해와 방지 방법
+
+### 앱 배포
+- 어플리케이션의 배포 방법
+
+### 클라우드 데이터베이스
+- 클라우드 기반 데이터베이스의 이해와 사용법
+
+### 이미지 업로드 and Storage
+- 이미지 업로드 및 저장 처리
+
+### Map과 지오코딩 (Geocoding)
+- 지도 및 지오코딩 서비스의 활용법
 
 
+# 👉 웹 개발 최신 문법 (HTML5, CSS3, 모던 자바스크립트)
+- 최신 웹 개발 문법 및 기술 습득
 
-다음과 같은 빌드 방법도 배웁니다.
+# 👉 CSS 프레임워크 사용법
+- Bootstrap 5, Semantic UI, Bulma 등의 실무 CSS 프레임워크 활용법
 
-#1: Spring 및 Spring Boot를 이용해 웹 애플리케이션 빌드하기
+# 👉 정적 HTML과 CSS로 포트폴리오 사이트 만들기
+- HTML과 CSS를 사용하여 정적 포트폴리오 웹사이트 제작
 
-#2: Spring Boot를 이용해 효율적인 REST API 빌드하기
+# 👉 멋진 반응형 포트폴리오 만들기
+- 반응형 디자인 기법을 활용하여 멋진 포트폴리오 웹사이트 제작
 
-#3: Spring, Spring Boot, React, Spring Security를 이용해 풀 스택 애플리케이션 빌드하기
+# 👉 자바스크립트 기초 및 심화 문법
+- Vanilla JS를 활용한 기초 및 고급 자바스크립트 문법 학습
+
+# 👉 DOM 조작법
+- Vanilla JS를 사용하여 Document Object Model 조작 방법 습득
+
+# 👉 NodeJS를 사용해 서버 사이드 프로그램 만들기
+- NodeJS를 활용한 서버 사이드 개발 기초 및 실습
+
+# 👉 HTTP 요청과 Postman을 사용한 API 테스터링
+- HTTP 요청과 Postman을 활용한 API 테스트 방법 학습
+
+# 👉 보안 위협 인식 및 방지
+- SQL 인젝션, XSS 등의 보안 위협에 대한 인식과 방지 방법 습득
+
+# 👉 사용자 인증 기능 구현하기
+- 사용자 인증을 위한 기능 구현 방법 학습
+
+# 👉 다중 모델 및 DB를 사용한 복잡한 웹 애플리케이션 만들기
+- 다양한 데이터 모델과 데이터베이스를 활용한 복잡한 웹 애플리케이션 구현
+
+# 👉 Express와 MongoDB를 사용한 풀 스택 JS 애플리케이션 만들기
+- Express 및 MongoDB를 활용한 풀 스택 JavaScript 애플리케이션 개발
 
 
-
-다음 항목도 배웁니다.
-
-#1: Docker
-
-#2: Maven
-
-#3: Gradle
-
-#4: Spring AOP
-
-#5: Spring Security
-
-
-
-빌드한 애플리케이션을 AWS에 배포합니다.
-
-
-
-Spring Framework와 Spring Boot Framework를 이용해 실제 Java 애플리케이션을 빌드하고 클라우드에 배포하기 위해 알아야 모든 것을 배울 수 있는 과정입니다.  
 
 
 
