@@ -148,7 +148,7 @@
 				</div>
 			</div>
 		</div>
-	</nav>
+</nav>
 
 
 	<div class="container d-flex justify-content-center mt-5">
