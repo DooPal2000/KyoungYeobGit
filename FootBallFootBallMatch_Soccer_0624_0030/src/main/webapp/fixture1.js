@@ -1,5 +1,5 @@
 
-const apiKey = '735987fbd7mshc0c8b4d80a39ab8p19e685jsn1cb7e725f808';
+const apiKey = '';
 const leagueId = 292;
 
 let currentMonth = new Date().getMonth() + 1;
