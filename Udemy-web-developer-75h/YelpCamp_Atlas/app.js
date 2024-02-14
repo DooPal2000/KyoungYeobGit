@@ -2,7 +2,8 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const ejsMate = require('ejs-mate');
-const session = require('express-session')
+const session = require('express-session');
+const flash = require('connect-flash');
 
 const { campgroundSchema, reviewSchema } = require('./schemas.js');
 const ExpressError = require('./utils/ExpressError');
@@ -44,13 +45,14 @@ const sessionConfig = {
   resave: false,
   saveUnitialized: true,
   cookie: {
-    httpOnly: true, //보안 코드 (디폴트도 true)
+    httpOnly: true, //보안 코드 (디폴트 true)
     expires: Date.now() + 1000 * 60 * 60 * 24 * 7, // 만료 기한은 설정해야함
     maxAge: 1000 * 60 * 60 * 24 * 7
   }
 }
 
 app.use(session(sessionConfig));
+app.use(flash());
 
 
 
@@ -75,6 +77,12 @@ const validateReview = (req, res, next) => {
       next();
   }
 }
+
+app.use((req,res,next)=>{
+  res.locals.success = req.flash('success');
+  res.locals.success = req.flash('error');
+  next();
+})
 
 app.use('/campgrounds',campgrounds);
 app.use('/campgrounds/:id/reviews',reviews)
