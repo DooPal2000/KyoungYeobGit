@@ -1,1 +1,1 @@
-alert("hello static directory")
+// alert("hello static directory")

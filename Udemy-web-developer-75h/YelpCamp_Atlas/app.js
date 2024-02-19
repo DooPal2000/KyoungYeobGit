@@ -43,7 +43,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 const sessionConfig = {
   secret: 'thisissecretkey', // 실제 프로덕트에서는 비밀 키
   resave: false,
-  saveUnitialized: true,
+  saveUninitialized: true,
   cookie: {
     httpOnly: true, //보안 코드 (디폴트 true)
     expires: Date.now() + 1000 * 60 * 60 * 24 * 7, // 만료 기한은 설정해야함
@@ -55,32 +55,9 @@ app.use(session(sessionConfig));
 app.use(flash());
 
 
-
-
-
-const validateCampground = (req, res, next) => {
-  const { error } = campgroundSchema.validate(req.body);
-  if (error) {
-      const msg = error.details.map(el => el.message).join(',')
-      throw new ExpressError(msg, 400)
-  } else {
-      next();
-  }
-}
-
-const validateReview = (req, res, next) => {
-  const { error } = reviewSchema.validate(req.body);
-  if (error) {
-      const msg = error.details.map(el => el.message).join(',')
-      throw new ExpressError(msg, 400)
-  } else {
-      next();
-  }
-}
-
 app.use((req,res,next)=>{
   res.locals.success = req.flash('success');
-  res.locals.success = req.flash('error');
+  res.locals.error  = req.flash('error');
   next();
 })
 
