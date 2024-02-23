@@ -19,7 +19,9 @@ userSchema.statics.findAndValidate = async function (username, password) {
 }
 
 userSchema.pre('save', async function (next) {
-    if (!this.isModified('password')) return next();
+    if (!this.isModified('password')) return next(); // 특정 사용자 모델의 암호 변경 여부를 참, 거짓으로 나타낸다
+    //아래 해쉬를 할 필요가 없기 때문, 비번 변경 시에만 해쉬해주면 된다.
+    
     this.password = await bcrypt.hash(this.password, 12);
     next();
 })
