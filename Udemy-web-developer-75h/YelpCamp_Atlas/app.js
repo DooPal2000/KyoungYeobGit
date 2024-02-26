@@ -10,24 +10,25 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const User = require('./models/user.js');
 
-const campgrounds = require('./routes/camgprounds.js');
-const reviews = require('./routes/reviews.js');
+const userRoutes= require('./routes/user.js');
+const campgroundRoutes = require('./routes/camgprounds.js');
+const reviewRoutes = require('./routes/reviews.js');
 
 
 require('dotenv').config({ path: './process.env' });
 
 
 mongoose
-  .connect(
-    process.env.MONGODB_URI
-  )
-  .then(() => {
-    console.log("Connected to database!");
-  })
-  .catch((e) => {
-    console.log("Connection failed!");
-    console.error("Connection failed:", e);
-  });
+.connect(
+  process.env.MONGODB_URI
+)
+.then(() => {
+  console.log("Connected to database!");
+})
+.catch((e) => {
+  console.log("Connection failed!");
+  console.error("Connection failed:", e);
+});
 
 
 
@@ -72,15 +73,16 @@ app.use((req,res,next)=>{
 })
 
 app.get('/fakeUser', async(req,res) => {
-  const user = new User({email:'duq25@naver.com', username: 'yeob'})
+  const user = new User({ email:'duq25@naver.com', username: 'yeob' })
   const newUser = await User.register(user, 'chicken');
   res.send(newUser);
   
 })
 
 
-app.use('/campgrounds',campgrounds);
-app.use('/campgrounds/:id/reviews',reviews);
+app.use('/',userRoutes);
+app.use('/campgrounds',campgroundRoutes);
+app.use('/campgrounds/:id/reviews',reviewRoutes);
 
 
 app.get('/', (req, res) => {
